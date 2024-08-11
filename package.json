@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "render": "npx tailwindcss -i ./input.css -o ./styles/style.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -11,5 +11,9 @@
   "description": "",
   "devDependencies": {
     "tailwindcss": "^3.4.9"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.1.5",
+    "flowbite": "^2.5.1"
   }
 }
