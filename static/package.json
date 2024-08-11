@@ -1,0 +1,19 @@
+{
+  "name": "static",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "render": "npx tailwindcss -i ./input.css -o ./styles/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.9"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.1.5",
+    "flowbite": "^2.5.1"
+  }
+}
