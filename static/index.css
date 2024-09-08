@@ -1,0 +1,19 @@
+aside .sidebtn{
+   transition: all 0.3s ease;
+}
+
+aside .sidebtn.active{
+  font-size: 35px;
+  width: 58px;
+  height: 58px;
+  z-index: 999;
+  transform: translateX(30%);
+  /*background: white;*/
+}
+
+aside .sidebtn.active .icon_container{
+  transform: translateX(-2%);
+  height: 65px;
+  color: #41d2faec;
+  box-shadow: none;
+}
