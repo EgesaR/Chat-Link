@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     //"./*.{html}",
-    "./index.html",
+    "./*.html",
     "./node_modules/flowbite/**/*.js",
     "./scripts/**/*.js"
   ],

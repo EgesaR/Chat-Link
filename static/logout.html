@@ -1,0 +1,45 @@
+<!DOTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Link</title>
+  <script src="./scripts/Components/logoutDialog.js" type="module"></script>
+  <script src="./scripts/screens/Home.js" type="module"></script>
+  <script src="./scripts/main.js" type="module"></script>
+  <!-- Boxicons CSS -->
+  <link rel="stylesheet" href="./styles/boxicons.min.css" title="" type="" />
+  <link href="/styles/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/index.css" />
+  <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
+</head>
+<body class="bg-[#161616] h-screen w-full flex justify-center items-center
+text-white flex-col">
+  <h2 class="text-xl">Bye!!! hope to see you again</h2>
+  <h2 class="text-lg">We are logging you out in</h2>
+  <h1 class="text-4xl font-extrabold mt-10">
+    <label id="counter">10</label>
+    <label>s</label>
+  </h1>
+  <script>
+    let counterLogoutText = document.getElementById("counter")
+    console.log(counterLogoutText.innerText)
+    const countdown = seconds => {
+      const interval = setInterval(() => {
+        counterLogoutText.innerText=`${seconds}`
+        seconds--;
+        if(seconds < 0){
+          clearInterval(interval)
+          console.log("countdown finished")
+        }
+      },1000);
+    }
+    
+    window.addEventListener("DOMContentLoaded", () => {
+      countdown(10)
+    })
+  </script>
+</body>
+</html>

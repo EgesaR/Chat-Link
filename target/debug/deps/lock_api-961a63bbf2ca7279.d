@@ -1,0 +1,10 @@
+/data/data/com.termux/files/home/Chat-Link/target/debug/deps/liblock_api-961a63bbf2ca7279.rmeta: /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/lib.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/mutex.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/remutex.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/rwlock.rs
+
+/data/data/com.termux/files/home/Chat-Link/target/debug/deps/liblock_api-961a63bbf2ca7279.rlib: /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/lib.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/mutex.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/remutex.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/rwlock.rs
+
+/data/data/com.termux/files/home/Chat-Link/target/debug/deps/lock_api-961a63bbf2ca7279.d: /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/lib.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/mutex.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/remutex.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/rwlock.rs
+
+/data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/lib.rs:
+/data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/mutex.rs:
+/data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/remutex.rs:
+/data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.12/src/rwlock.rs:

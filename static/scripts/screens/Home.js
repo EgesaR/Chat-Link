@@ -1,88 +1,175 @@
 export const Home = () => {
   
   return (`
-    <div class="w-full min-h-[100%] pt-[1%]">
-      <section class="w-full h-[50%] mb-5 bg-gradient-to-tr
-      from-indigo-200 via-sky-200 to-blue-200 px-5 rounded-md py-4 flex">
-        <div>
-          <h4 class="text-[16px] mb-4">Hello, Lisa!</h4>
-          <h1 class="text-[2.8rem] whitespace-nowrap font-semibold mb-7">12.19 Tue</h1>
-          <button class="text-[15px] text-white bg-black rounded-md w-[85%] py-2
-          px-2 flex justify-center items-center gap-2">
-            <i class="bx bx-plus"></i>
-            <label class="whitespace-nowrap">
-              Plan new call
-            </label>
-          </button>
-        </div>
-        <div class="ml-auto">
-          <button class="h-8 w-8 border-[1.5px] border-slate-400 flex items-center justify-center
-          rounded-full">
-            <i class="bx bx-dots-vertical-rounded"></i>
-          </button>
-        </div>
-      </section>
-      <section class="w-full h-[50%] mb-5 bg-gradient-to-tr
-      from-indigo-200 via-sky-200 to-blue-200 px-5 rounded-md py-4">
-        <label class="text-[18px] text-slate-500">2 calls for today:</label>
-        <div class="flex w-full gap-3 overflow-x-auto mt-2 pl-2">
-          ${HomeScheduleCard("Marketing weekly", "bg-orange-400", 1)}
-          ${HomeScheduleCard("Monthly group", "bg-red-400",2)}
-          ${HomeScheduleCard("School Upcome","bg-yellow-400",3)}
-          ${HomeScheduleCard("School Upcome","bg-emerald-400",4)}
-          ${HomeScheduleCard("Math Lecture","bg-indigo-400",5)}
-          ${HomeScheduleCard("School Upcome","bg-purple-400",500)}
-        </div>
-      </section>
-      
+    <div class="w-full min-h-[76vh] h-[70%] pt-[3%] oveflow-hidden relative">
+      <div class="text-3xl font-bold text-black/60 pl-2">
+        Chats
+      </div>
+     ${tabs()}
+      <button class="w-14 h-14 text-white absolute -bottom-10 -right-1
+      bg-sky-300 rounded-xl flex justify-center items-center font-bold text-xl
+      hover:bg-sky-400 sm:right-10 sm:-bottom-20" id="openAddChat">
+        <i class="bx bx-message-add"></i>
+      </button>
+      ${AddChat()}
     </div>
   `)
 }
 
-const HomeScheduleCard = (taskName = "Task", bgColor="bg-teal-300", numberOfAvatar=1) => {
-  for(var i =0; i < taskName.length; i++){
-    
-  }
+const AddChat = () => {
   return(`
-    <div class="w-60 h-[100px] ${bgColor} rounded-md flex items-center px-4
-    gap-5">
-      <div class="flex flex-col">
-       <p class="text-[15px] font-semibold whitespace-nowrap mb-3">${taskName}</p>
-       <p class="text-[13px]">2:00 - 2:30 PM</p>
-      </div>
-      <div class="ml-auto flex flex-col items-center">
-        <div class="flex">
-          ${
-            HomeScheduleCardAvatarList(bgColor,numberOfAvatar)
-          }
-        </div>
+    <div class="w-full h-full bg-white fixed z-20 top-0" id="AddChat">
+      <div class="w-full h-full relative">
+        <button class="bg-transparent h-10 w-10 font-bold text-xl flex
+        justify-center items-center mt-2 ml-2 rounded-full hover:bg-black/40
+        hover:text-white dark:hover:bg-white/40 dark:hover:text-black"
+        id="closeAddChatBtn">
+          <i class="bx bx-arrow-back"></i>
+        </button>
+        ${screen1()}
+        ${screen2()}
       </div>
     </div>
   `)
 }
 
-const HomeScheduleCardAvatarList = (bgColor = "bg-emerald-500", num = 2) => {
-    let arr = Array.from({length: num >= 2 ? num : 2})
-    let div = document.createElement("div")
-    for(var i = 0; i < arr.length; i++){
-      if(i < 2){
-        div.innerHTML += `
-          <div class="bg-emerald-500 h-7 w-7 p-2 flex items-center justify-center rounded-full -ml-2">
-            ${i}
+const screen1 = () => {
+  return(`
+  <div class="w-full flex flex-col items-center justify-center mt-3 px-8
+          sm:flex-row sm:h-full" id="screen1">
+    <div class="h-60 w-60 bg-red-200 sm:h-[400px] sm:w-[400px]">
+            
+    </div>
+    <div class="w-full text-center sm:flex-1 sm:px-5">
+      <h2 class="text-[22px] font-semibold text-left text-slate-800 mt-8 px-5
+      sm:text-center sm:text-[30px]">
+        New optimistic ways of connecting with others...
+      </h2>
+      <p class="text-sm text-center text-slate-600 mt-4 sm:mt-2 sm:text-lg">
+        Connect with others with a search of a phone number, email and QRcode.
+      </p>
+      <button class="w-[80%] py-2 rounded-xl bg-sky-400 absolute bottom-[9%]
+                hover:bg-sky-300 sm:relative translate-x-[-50%]
+                sm:translate-x-[0%] sm:w-[30%] sm:py-2.5 sm:mt-40"
+                id="goToScreen2Btn">
+                  Let's get started
+              </button>
+            </div>
+  </div>
+  `)
+}
+
+const screen2 = () => {
+  return(`
+  <div class="w-full flex flex-col items-center justify-center mt-3 px-8
+          sm:flex-row sm:h-full hidden" id="screen2">
+    <div class="h-60 w-[300px] sm:h-[400px] border-2 border-black" id="reader">
+            
+    </div>
+    <div class="w-full text-center sm:flex-1 sm:px-5">
+      <p class="text-center text-sm" id="result">
+        
+      </p>
+    </div>
+    <div id="QR-output"></div>
+  </div>
+  `)
+}
+
+const tabs = () => {
+  return(`
+    <div class="max-w-3xl mx-auto px-0 sm:px-0">
+      <div class="sm:w-7/12 sm:mx-auto">
+        <div
+          role="tablist"
+          aria-label="tabs"
+          class="relative w-max mx-auto h-12 grid grid-cols-3 items-center
+          text-sm whitespace-nowrap
+          px-[6px] rounded-full overflow-y-hidden overflow-x-scroll w-[98%] shadow-2xl shadow-900/20
+          px-[6px] rounded-full overflow-y-hidden overflow-x-scroll w-[98%] shadow-2xl shadow-900/20
+          bg-gray-900/20
+          transition sm:overflow-hidden">
+          
+          <div class="absolute top-0 bottom-0 h-11 my-auto left-0 rounded-full bg-white shadow-md
+          tabIndicator"></div>
+          <button
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-1"
+            id="tab-1"
+            tabindex="0"
+            class="relative block h-10 px-3 tab rounded-full">
+            <span class="text-gray-800">
+              First Tab
+            </span>
+          </button>
+          
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-2"
+            id="tab-2"
+            tabindex="-1"
+            class="relative block h-10 px-3 tab rounded-full">
+            <span class="text-gray-800">
+              Second Tab
+            </span>
+          </button>
+          
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-3"
+            id="tab-3"
+            tabindex="-1"
+            class="relative block h-10 px-3 tab rounded-full">
+            <span class="text-gray-800">
+              Third Tab
+            </span>
+          </button>
+        </div>
+        
+        <div class="mt-6 relative rounded-3xl bg-purple-50">
+          
+          <div 
+            role="tabpanel"
+            id="panel-1"
+            class="tab-panel p-6 transition duration-300">
+            <h2 class="text-xl font-semibold text-gray-800">
+              First tab panel
+            </h2>
+            <p class="mt-4 text-gray-600">
+              Lorem, ipsum dolor sit amet consectetur adipiscing
+            </p>
           </div>
           
-        `
-      }
-    }
-    if( arr.length > 2){
-      div.innerHTML+= `
-        <div class="bg-black/50 text-white h-7 w-7 p-2 flex items-center
-        justify-center rounded-full -ml-2 ${arr.length < 100 ? "text-sm" :
-        "text-[9px]"}">
-          +${arr.length-1}
+          <div 
+            role="tabpanel"
+            id="panel-2"
+            class="absolute top-0 invisible opacity-0 tab-panel p-6 transition duration-300">
+            <h2 class="text-xl font-semibold text-gray-800">
+              Second tab panel
+            </h2>
+            <p class="mt-4 text-gray-600">
+              Lorem, ipsum dolor sit amet consectetur adipiscing
+            </p>
+          </div>
+          
+          <div 
+            role="tabpanel"
+            id="panel-3"
+            class="absolute top-0 invisible opacity-0 tab-panel p-6 transition duration-300">
+            <h2 class="text-xl font-semibold text-gray-800">
+              Third tab panel
+            </h2>
+            <p class="mt-4 text-gray-600">
+              Lorem, ipsum dolor sit amet consectetur adipiscing
+            </p>
+          </div>          
         </div>
-      `
-    }
-    
-    return div.innerHTML
+      </div>
+     </div>
+  `)
 }
+
+//github personal token: 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

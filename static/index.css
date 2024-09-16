@@ -50,16 +50,22 @@ aside .sidebtn.active .icon_container{
 }
 
 .navigation ul li.active a .icon::after{
-  opacity: 0.5;
+  opacity: 0.2;
   transition-delay: 0.5s;
 }
 
 .indicator{
  z-index: 1;
+ transition: 0.7s;
+ left: -15%;
+}
+
+.navigation ul li.active ~ .indicator{
+ left: 27.5px;
  transition: 0.5s;
 }
 
-.indicator::before{
+.navigation ul li.active ~ .indicator::before{
   content: "";
   position: absolute;
   top: 25px;
@@ -71,7 +77,7 @@ aside .sidebtn.active .icon_container{
   box-shadow: 15px 18px white;
 }
 
-.indicator::after{
+.navigation ul li.active ~ .indicator::after{
   content: "";
   position: absolute;
   top: -28px;
@@ -81,6 +87,23 @@ aside .sidebtn.active .icon_container{
   background: transparent;
   border-radius: 50%;
   box-shadow: -15px 18px white;
+}
+
+
+#AddChat{
+  transition: 0.5s;
+  transform: translateX(110%);
+  
+}
+
+#AddChat.active{
+  transform: translateX(-23%) translateY(0%);
+}
+
+@media (min-width: 1000px){
+  #AddChat.active{
+    transform: translateX(-7%) translateY(0%);
+  }
 }
 
 .navigation ul li:nth-child(1).active ~ .indicator{
@@ -101,4 +124,69 @@ aside .sidebtn.active .icon_container{
 
 .navigation ul li:nth-child(5).active ~ .indicator{
   transform: translateY(calc(54px * 4));
+}
+
+.logo{
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+  font-size: 2.7rem;
+  font-weight:500;
+}
+
+.logo.active{
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.8s;
+}
+
+.logo.fade{
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.8s
+}
+
+.loader {
+  width: 45px;
+  aspect-ratio: 1;
+  display: grid;
+  position:absolute;
+  opacity: 0;
+}
+
+.loader.active, .footerText.active{
+  opacity: 1;
+  transition: ease-in-out 2.25s;
+}
+
+.loader.fade, .footerText.fade{
+  opacity: 0;
+  transition: ease-in-out 2.25s;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  width: 15px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 3px #fff inset;
+  filter: drop-shadow(30px 30px 0 #fff);
+  animation: l8 1.5s infinite alternate;
+}
+.loader:after {
+  margin: 0 0 0 auto; 
+  filter: drop-shadow(-30px 30px 0 #fff);
+  animation-delay: -1s;
+}
+@keyframes l8 {
+  0%,10%   {border-radius:0}
+  30%,40%  {border-radius:50% 0}
+  60%,70%  {border-radius:50%}
+  90%,100% {border-radius:0 50%}
+}
+
+.tabIndicator{
+  transition: left .4s;
 }

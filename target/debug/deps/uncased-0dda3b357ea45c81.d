@@ -1,0 +1,10 @@
+/data/data/com.termux/files/home/Chat-Link/target/debug/deps/libuncased-0dda3b357ea45c81.rmeta: /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/lib.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/owned.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/borrowed.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/as_uncased.rs
+
+/data/data/com.termux/files/home/Chat-Link/target/debug/deps/libuncased-0dda3b357ea45c81.rlib: /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/lib.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/owned.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/borrowed.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/as_uncased.rs
+
+/data/data/com.termux/files/home/Chat-Link/target/debug/deps/uncased-0dda3b357ea45c81.d: /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/lib.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/owned.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/borrowed.rs /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/as_uncased.rs
+
+/data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/lib.rs:
+/data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/owned.rs:
+/data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/borrowed.rs:
+/data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uncased-0.9.10/src/as_uncased.rs:

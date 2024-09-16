@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chat Link</title>
-    <script src="./scripts/screens/Home.js" type="module"></script>
+  <script src="./scripts/Components/logoutDialog.js" type="module"></script>
+  <script src="./scripts/screens/Home.js" type="module"></script>
   <script src="./scripts/main.js" type="module"></script>
   <!-- Boxicons CSS -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="./styles/boxicons.min.css" title="" type="" />
   <link href="/styles/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="/index.css" />
@@ -17,85 +17,121 @@
 </head>
 
 <body class="h-screen w-full bg-purple-110 relative overflow-hidden">
-  <nav class="w-full shadow-md px-2 h-[7%] flex items-center rounded-b-sm bg-white fixed -top-1 left-0">
-    <h2 class="font-medium text-2xl">Chat Link</h2>
-    <div class="ml-auto rounded-lg shadow-md h-[67%] flex items-center px-3 gap-2">
-      <div class="text-2xl flex justify-center items-center h-full">
-        <i class="bx bx-user-circle"></i>
+  <div class="fixed z-40 left-0 top-0 h-screen w-full bg-[#161616]
+    duration-1000 splashScreen">
+    <h1 class="absolute top-[40%] left-[50%] translate-x-[-50%]
+      translate-y-[-50%] flex text-white logo-header">
+      <span class="logo">Chat</span>
+      <span class="logo">Link</span>
+    </h1>
+        <div class="loader absolute bottom-[20%] left-[48%] sm:bottom-[30%] sm:left-[50%]
+        translate-x-[-15%]"></div>
+    <p class="text-slate-400 text-lg font-bold absolute italic bottom-[10%]
+    left-[52.5%]
+      translate-x-[-45%] sm:text-2xl sm:bottom-8 sm:translate-x-[-62.5%]
+      footerText">
+      By Horizon
+    </p>
+  </div>
+  <div class="h-full w-full mainScreen relative top-0 left-0">
+    <nav class="w-full shadow-md px-2 h-[9%] flex items-center rounded-b-sm bg-white fixed -top-1 left-0">
+      <h2 class="font-medium text-2xl">Chat Link</h2>
+      <div class="ml-auto rounded-lg shadow-md h-[67%] flex items-center px-3 gap-2">
+        <div class="text-2xl flex justify-center items-center h-full">
+          <i class="bx bx-user-circle"></i>
+        </div>
+        <div class="text-2xl flex justify-center items-center h-10 w-10
+          rounded-full
+          hover:bg-black/30" id="settingsBtn">
+          <i class="bx bx-cog"></i>
+        </div>
       </div>
-      <div class="text-2xl flex justify-center items-center h-full">
-        <i class="bx bx-cog"></i>
-      </div>
-    </div>
-  </nav>
-  <aside class="w-[15%] bg-gradient-to-b from-emerald-400 via-blue-400 to-indigo-400 fixed top-[6.4%] left-0 rounded-r-lg py-0.5 shadow-xl" style="height: calc(100% - 6.4%)">
-     <div class="navigation relative w-[95.5%] bg-white flex h-[65%]
-      justify-center items-center rounded-[10px] pt-5" id="navigation">
-       <ul class="flex w-[350px] flex-col h-[95%] gap-3">
-         <li class="list-none relative w-[55px] h-[45px] list active"
-         style="--clr:#f44336">
-           <a href="#" class="relative flex justify-center items-center h-full
-           w-full">
-             <span class="icon relative block w-[40px] h-[40px] flex
-             items-center rounded-full justify-center text-[#222327]
-             text-[1.5em]">
-               <i class="bx bx-home-alt"></i>
-             </span>
-           </a>
-         </li>
-        <li class="list-none relative w-[55px] h-[45px] list"
-        style="--clr:#ffa117">
-           <a href="#" class="relative flex justify-center items-center h-full
-           w-full">
-             <span class="icon relative block w-[40px] h-[40px] flex
-             items-center rounded-full justify-center text-[#222327]
-             text-[1.5em]">
+    </nav>
+    <aside class="w-[15%] bg-gradient-to-b from-emerald-400 via-blue-400
+      to-indigo-400 fixed top-[8.4%] left-0 rounded-r-lg py-0.5 shadow-xl flex
+      flex-col gap-6 sm:w-[5%]"
+      style="height: calc(100% - 8.4%)">
+      <div class="navigation relative w-[95.5%] bg-white flex h-[57%]
+        justify-center items-center rounded-[10px] pt-5 sm:h-[42.5%] sm:pt-7" id="navigation">
+        <ul class="flex w-[350px] flex-col h-[95%] gap-3">
+          <li class="list-none relative w-[55px] h-[45px] list active"
+            style="--clr:#f44336">
+            <a href="#" class="relative flex justify-center items-center h-full
+              w-full">
+              <span class="icon relative block w-[40px] h-[40px] flex
+                items-center rounded-full justify-center text-[#222327]
+                text-[1.5em]">
+                <i class="bx bx-home-alt"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-none relative w-[55px] h-[45px] list"
+            style="--clr:#ffa117">
+            <a href="#" class="relative flex justify-center items-center h-full
+              w-full">
+              <span class="icon relative block w-[40px] h-[40px] flex
+                items-center rounded-full justify-center text-[#222327]
+                text-[1.5em]">
                 <i class="bx bx-bell"></i>
-             </span>
-           </a>
-         </li>
-         <li class="list-none relative w-[55px] h-[45px] list"
-         style="--clr:#0fc70f">
-           <a href="#" class="relative flex justify-center items-center h-full
-           w-full">
-             <span class="icon relative block w-[40px] h-[40px] flex
-             items-center rounded-full justify-center text-[#222327]
-             text-[1.5em]">
-               <i class="bx bx-archive"></i>
-             </span>
-           </a>
-         </li>
-         <li class="list-none relative w-[55px] h-[45px] list"
-         style="--clr:#2196f3">
-           <a href="#" class="relative flex justify-center items-center h-full
-           w-full">
-             <span class="icon relative block w-[40px] h-[40px] flex
-             items-center rounded-full justify-center text-[#222327]
-             text-[1.5em]">
-               <i class="bx bx-phone"></i>
-             </span>
-           </a>
-         </li>
-         <li class="list-none relative w-[55px] h-[45px] list"
-         style="--clr:#b145e9">
-           <a href="#" class="relative flex justify-center items-center h-full
-           w-full">
-             <span class="icon relative block w-[40px] h-[40px] flex
-             items-center rounded-full justify-center text-[#222327]
-             text-[1.5em]">
-               <i class="bx bx-group"></i>
-             </span>
-           </a>
-         </li>
-         <div class="indicator absolute left-[27.5px] w-[55px] h-[65px] bg-white
-         rounded-full"></div>
-       </ul>
-     </div>
-  </aside>
-  <main class="bg-gradient-to-tr from-indigo-50/60 to-sky-50/60 pt-[5%]
-  overflow-y-scroll text-lg pl-[20%]  pr-2 mt-[11.5%] overflow-x-hidden" style="height:
-  calc(100vh - 5.8%)" id="mainView">
- 
-  </main>
+              </span>
+            </a>
+          </li>
+          <li class="list-none relative w-[55px] h-[45px] list"
+            style="--clr:#0fc70f">
+            <a href="#" class="relative flex justify-center items-center h-full
+              w-full">
+              <span class="icon relative block w-[40px] h-[40px] flex
+                items-center rounded-full justify-center text-[#222327]
+                text-[1.5em]">
+                <i class="bx bx-archive"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-none relative w-[55px] h-[45px] list"
+            style="--clr:#2196f3">
+            <a href="#" class="relative flex justify-center items-center h-full
+              w-full">
+              <span class="icon relative block w-[40px] h-[40px] flex
+                items-center rounded-full justify-center text-[#222327]
+                text-[1.5em]">
+                <i class="bx bx-phone"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-none relative w-[55px] h-[45px] list"
+            style="--clr:#b145e9">
+            <a href="#" class="relative flex justify-center items-center h-full
+              w-full">
+              <span class="icon relative block w-[40px] h-[40px] flex
+                items-center rounded-full justify-center text-[#222327]
+                text-[1.5em]">
+                <i class="bx bx-group"></i>
+              </span>
+            </a>
+          </li>
+          <div class="indicator absolute w-[55px] h-[65px] bg-white
+            rounded-full"></div>
+        </ul>
+      </div>
+
+      <div class="w-[95.5%] bg-white flex h-[9%] justify-center items-center rounded-[10px]">
+        <a href="index.html" class="text-2xl">
+          <i class="bx bx-refresh"></i>
+        </a>
+      </div>
+
+      <button class="w-11 h-11 absolute bottom-2.5 rounded-full left-1 text-2xl
+        flex justify-center items-center border border-dashed
+        focus:border-0 hover:bg-slate-400/20" id="openLogoutDailogBtn">
+        <i class="bx bx-log-out"></i>
+      </button>
+    </aside>
+    <main class="bg-gradient-to-tr from-indigo-100/70 to-sky-100/70 pt-[5%]
+      overflow-y-scroll text-lg pl-[23%]  pr-2 mt-[11.5%] overflow-x-hidden
+      sm:pl-[7%] sm:pr-5 sm:mt-[5%] sm:pt-0" style="height:
+      calc(100vh - 5.8%)" id="mainView">
+
+    </main>
+  </div>
 </body>
 </html>
